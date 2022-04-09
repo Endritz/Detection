@@ -16,6 +16,9 @@
 flask-server/venv/
 
 flask-server/venv
+/build
+/public
+/src
 
 
 # testing

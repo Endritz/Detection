@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-app-gzgzp.ondigitalocean.app/static/css/main.1737db4c.css",
-    "main.js": "/my-app-gzgzp.ondigitalocean.app/static/js/main.9845711c.js",
-    "static/js/787.a7930029.chunk.js": "/my-app-gzgzp.ondigitalocean.app/static/js/787.a7930029.chunk.js",
-    "index.html": "/my-app-gzgzp.ondigitalocean.app/index.html",
-    "main.1737db4c.css.map": "/my-app-gzgzp.ondigitalocean.app/static/css/main.1737db4c.css.map",
-    "main.9845711c.js.map": "/my-app-gzgzp.ondigitalocean.app/static/js/main.9845711c.js.map",
-    "787.a7930029.chunk.js.map": "/my-app-gzgzp.ondigitalocean.app/static/js/787.a7930029.chunk.js.map"
+    "main.css": "./static/css/main.1737db4c.css",
+    "main.js": "./static/js/main.8e4bfa6f.js",
+    "static/js/787.a7930029.chunk.js": "./static/js/787.a7930029.chunk.js",
+    "index.html": "./index.html",
+    "main.1737db4c.css.map": "./static/css/main.1737db4c.css.map",
+    "main.8e4bfa6f.js.map": "./static/js/main.8e4bfa6f.js.map",
+    "787.a7930029.chunk.js.map": "./static/js/787.a7930029.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1737db4c.css",
-    "static/js/main.9845711c.js"
+    "static/js/main.8e4bfa6f.js"
   ]
 }

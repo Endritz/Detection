@@ -1,9 +1,9 @@
 
 from importlib.resources import path
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask import request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import time
 
 from selenium import webdriver
@@ -206,7 +206,8 @@ def download_profile(profileName):
 app = Flask(__name__)
 cors = CORS(app)
 
-@app.route("/requests", methods = ['GET'])
+@app.route("/test", methods = ['GET'])
+@cross_origin()
 def testfunc():
     results = {'Data': [{'Image': 'zuni.115/zuni.1150.jpg', 'Accuracy': '49.86', 'Date': 'JANUARY 28', 'Caption': 'Planning on adding some attachments later #palmettostatearmory #guns #cz #9mm #ar #ar15 #czp07 #556nato #leapoldoptics #rifles #suppressor'}, {'Image': 'zuni.115\\zuni.1151.jpg', 'Accuracy': '43.35', 'Date': 'JANUARY 30', 'Caption': 'Finally Bought a Sig red dot for my AR from Glick-Twins. #palmettostatearmory #guns #cz #9mm #ar #ar15 #czp07 #556nato #leapoldoptics #rifles #suppressor #glicktwins'}, {'Image': 'zuni.115\\zuni.1152.jpg', 'Accuracy': '48.72', 'Date': 'JANUARY 28', 'Caption': 'Got a flashlight that my big bro gave me. Bout to attach this to my AR. #palmettostatearmory #guns #cz #9mm #ar #ar15 #czp07 #556nato #leapoldoptics #rifles #suppressor'}]}
     return results
@@ -216,6 +217,7 @@ def testfunc():
 
 
 @app.route("/requests", methods = ['GET','POST'])
+@cross_origin()
 def requests():
     data = request.get_json()
     print(type(data))
@@ -229,10 +231,12 @@ def requests():
 
     return newdata
     
-
+@app.route('/')
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
 #auth = firebase_storage.auth()
 

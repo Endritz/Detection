@@ -16,6 +16,7 @@
 flask-server/venv/
 
 flask-server/venv
+flask-server/myvenv
 
 
 # testing

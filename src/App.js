@@ -64,7 +64,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username })
       };
-      fetch('/requests', requestOptions)
+      fetch('http://68.183.136.191/requests', requestOptions)
         .then(response => response.json())
         .then(data => {
           setData(data);

@@ -9,6 +9,7 @@ logs
 **/*.backup.*
 **/*.back.*
 
+flask-server/myvenv
 node_modules
 bower_components
 

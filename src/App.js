@@ -60,7 +60,6 @@ function App() {
     if (username !== "username") {
       console.log("App running")
       const requestOptions = {
-        mode: 'no-cors',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username })
